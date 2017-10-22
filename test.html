@@ -65,6 +65,16 @@
 }
 
 	</style>
+	<script type='text/javascript'>
+	
+	  function pressed(e,v) {
+		var code = (e.keyCode ? e.keyCode : e.which);
+		if(code == 13) { //Enter keycode
+			document.getElementById('chat').innerHTML += document.getElementById('blub').value + '<br />';
+			document.getElementById('blub').value = "";
+		}
+	  }
+	</script>
 </head>	
     
 <body>
@@ -103,10 +113,12 @@
       function stopVideo() {
         player.stopVideo();
       }
+	  
     </script>
         <a onclick='player.seekTo(10);'>Go to blub</a>
 
-
+		<div id='chat'>Some chat message<br /></div>
+	<input type="text" value="Ask a question!" id='blub' name='blub' onclick='document.getElementById("blub").value="";' onKeyPress='pressed(event,this);'/>
 
 </div>
 
