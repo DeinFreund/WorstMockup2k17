@@ -15,7 +15,7 @@
 		p { color: #fff; font-family: Helvetica; font-size: 16px; line-height: 24px; margin-bottom: 22px; -webkit-font-smoothing: antialiased; }
 		a { color: #fff; font-weight: bold; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.3); }
 		a:hover { color: #93a1a1; border-bottom: 1px solid rgba(147,161,161,1); }
-		#monogram { width: 50px; padding: 50px 0 0 0; margin: 0 auto 0 50px; }
+		#monogram { width: 50px; padding: 100px 100px 100px 70px; margin: 0 auto 0 50px; }
 		#about { width: 666px; padding: 0 0 0 150px; margin: -125px 50px 0 auto !important; }
 		/* Margin positions text around */  
 		@media (max-width: 900px) {
@@ -23,6 +23,47 @@
 			#about { position: relative; width: auto; padding: 90px; margin: 0 !important; }
 			background-image { opacity: 0.2; }
 		}
+
+
+.rounded-list a{
+    position: relative;
+    display: block;
+    padding: .4em .4em .4em 2em;
+    *padding: .4em;
+    margin: .5em 0;
+    background: #ddd;
+    color: #444;
+    text-decoration: none;
+    border-radius: .3em;
+    transition: all .3s ease-out;   
+}
+
+.rounded-list a:hover{
+    background: #eee;
+}
+
+.rounded-list a:hover:before{
+    transform: rotate(360deg);  
+}
+
+.rounded-list a:before{
+    content: counter(li);
+    counter-increment: li;
+    position: absolute; 
+    left: -1.3em;
+    top: 50%;
+    margin-top: -1.3em;
+    background: #87ceeb;
+    height: 2em;
+    width: 2em;
+    line-height: 2em;
+    border: .3em solid #fff;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 2em;
+    transition: all .3s ease-out;
+}
+
 	</style>
 </head>	
     
@@ -71,14 +112,14 @@
 
 <!-- swap out for questions-->
 <div id="about">
-<ul class="connected list no2" style="border: 1px solid black; list-style-type:none">
-  <li>Can you tell me a little about yourself? </li>
-  <li>How did you hear about the position? </li>
-  <li>What do you know about the company? </li>
-  <li>Why do you want this job?</li>
-  <li>Why should we hire you? </li>
-  <li>What are your greatest professional strengths? </li>
-  <li>What do you consider to be your weaknesses? </li>
+<ul class="rounded-list" style="list-style-type:none">
+  <li><a href="">Can you tell me a little about yourself?</a></li>
+  <li><a href="">How did you hear about the position? </a></li>
+  <li><a href="">What do you know about the company? </a></li>
+  <li><a href="">Why do you want this job?</a></li>
+  <li><a href="">Why should we hire you? </a></li>
+  <li><a href="">What are your greatest professional strengths? </a></li>
+  <li><a href="">What do you consider to be your weaknesses? </a></li>
 </ul>
 </div>
 
