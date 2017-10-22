@@ -23,6 +23,11 @@
 			#about { position: relative; width: auto; padding: 90px; margin: 0 !important; }
 			background-image { opacity: 0.2; }
 		}
+		#blub{
+			width: 99%;
+			top: 10px;
+			position: relative;
+		}
 
 
 .rounded-list a{
@@ -63,6 +68,10 @@
     border-radius: 2em;
     transition: all .3s ease-out;
 }
+.rounded-list a:after{
+
+    counter-increment: li + 1;
+}
 
 	</style>
 	<script type='text/javascript'>
@@ -70,7 +79,8 @@
 	  function pressed(e,v) {
 		var code = (e.keyCode ? e.keyCode : e.which);
 		if(code == 13) { //Enter keycode
-			document.getElementById('chat').innerHTML += document.getElementById('blub').value + '<br />';
+		
+			document.getElementById('questionlist').innerHTML += "<li><a onclick='player.seekTo(70);'>" + document.getElementById('blub').value + "</a></li>";
 			document.getElementById('blub').value = "";
 		}
 	  }
@@ -107,7 +117,7 @@
 
       // 4. The API will call this function when the video player is ready.
       function onPlayerReady(event) {
-        event.target.playVideo();
+        //event.target.playVideo();
       }
 
       function stopVideo() {
@@ -115,21 +125,27 @@
       }
 	  
     </script>
+<<<<<<< HEAD
 	<input type="text" value="Ask a question!" id='blub' name='blub' onclick='document.getElementById("blub").value="";' onKeyPress='pressed(event,this);'/>
+=======
+        <a onclick='player.seekTo(10);'>Go to blub</a>
+>>>>>>> b4fa64bcf6724f88600032982f7913f9c28710cc
 
 </div>
 
 <!-- swap out for questions-->
 <div id="about">
-<ul class="rounded-list" style="list-style-type:none">
-  <li><a href="">Can you tell me a little about yourself?</a></li>
-  <li><a href="">How did you hear about the position? </a></li>
-  <li><a href="">What do you know about the company? </a></li>
-  <li><a href="">Why do you want this job?</a></li>
-  <li><a href="">Why should we hire you? </a></li>
-  <li><a href="">What are your greatest professional strengths? </a></li>
-  <li><a href="">What do you consider to be your weaknesses? </a></li>
+<ul class="rounded-list" style="list-style-type:none" id="questionlist">
+  <li><a onclick='player.seekTo(10);'>Can you tell me a little about yourself?</a></li>
+  <li><a onclick='player.seekTo(20);'>How did you hear about the position? </a></li>
+  <li><a onclick='player.seekTo(30);'>What do you know about the company? </a></li>
+  <li><a onclick='player.seekTo(40);'>Why do you want this job?</a></li>
+  <li><a onclick='player.seekTo(50);'>Why should we hire you? </a></li>
+  <li><a onclick='player.seekTo(60);'>What are your greatest professional strengths? </a></li>
+  <li><a onclick='player.seekTo(70);'>What do you consider to be your weaknesses? </a></li>
 </ul>
+	<input type="text" value="Ask a question!" id='blub' name='blub' onclick='document.getElementById("blub").value="";' onKeyPress='pressed(event,this);'/>
+
 </div>
 
 <!--
