@@ -129,7 +129,7 @@ input[type=text]:focus {
       var player;
       function onYouTubeIframeAPIReady() {
         player = new YT.Player('player', {
-          height: '390',
+          height: '360',
           width: '640',
           videoId: '3_d9SGbtuFM',
           events: {
@@ -154,13 +154,11 @@ input[type=text]:focus {
 <!-- swap out for questions-->
 <div id="about">
 <ul class="rounded-list" style="list-style-type:none" id="questionlist">
-  <li><a onclick='player.seekTo(10);'>Can you tell me a little about yourself?</a></li>
+  <li><a onclick='player.seekTo(0);'>Can you tell me a little about yourself?</a></li>
   <li><a onclick='player.seekTo(20);'>How did you hear about the position? </a></li>
   <li><a onclick='player.seekTo(30);'>What do you know about the company? </a></li>
   <li><a onclick='player.seekTo(40);'>Why do you want this job?</a></li>
-  <li><a onclick='player.seekTo(50);'>Why should we hire you? </a></li>
-  <li><a onclick='player.seekTo(60);'>What are your greatest professional strengths? </a></li>
-  <li><a onclick='player.seekTo(70);'>What do you consider to be your weaknesses? </a></li>
+  <li><a onclick='player.seekTo(18);'>How would you construct a stable tower out of marshmellows and spaghetti?</a></li>
 </ul>
 	<input type="text" value="Ask a question!" id='blub' name='blub' onclick='document.getElementById("blub").value="";' onKeyPress='pressed(event,this);'/>
 	<br/>
