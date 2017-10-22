@@ -23,12 +23,6 @@
 			#about { position: relative; width: auto; padding: 90px; margin: 0 !important; }
 			background-image { opacity: 0.2; }
 		}
-		#blub{
-			width: 99%;
-			top: 10px;
-			position: relative;
-		}
-
 
 .rounded-list a{
     position: relative;
@@ -71,6 +65,26 @@
 .rounded-list a:after{
 
     counter-increment: li + 1;
+}
+input[type=text] {
+    background-color: white;
+    background-image: url('question.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding-left: 40px;
+}
+
+
+input[type=text] {
+	width: auto;
+	top: 10px;
+	position: relative;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+    width: 100%;
 }
 
 	</style>
@@ -141,7 +155,9 @@
   <li><a onclick='player.seekTo(70);'>What do you consider to be your weaknesses? </a></li>
 </ul>
 	<input type="text" value="Ask a question!" id='blub' name='blub' onclick='document.getElementById("blub").value="";' onKeyPress='pressed(event,this);'/>
-
+	<br/>
+	<br/>
+	<br/>
 </div>
 
 <!--
