@@ -1,10 +1,38 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-  <body>
-    <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
-    <div id="player"></div>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>JobRoulette</title>
+	<link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
+	<meta http-equiv="pragma" content="no-cache" />
+	<meta name="robots" content="all" />
+	<meta name="MSSmartTagsPreventParsing" content="true" />
+	<meta http-equiv="imagetoolbar" content="false" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<style>
+		* { padding: 0; margin: 0; }
+		body { background-color: #073642; }
+		p { color: #fff; font-family: Helvetica; font-size: 16px; line-height: 24px; margin-bottom: 22px; -webkit-font-smoothing: antialiased; }
+		a { color: #fff; font-weight: bold; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.3); }
+		a:hover { color: #93a1a1; border-bottom: 1px solid rgba(147,161,161,1); }
+		#monogram { width: 50px; padding: 50px 0 0 0; margin: 0 auto 0 50px; }
+		#about { width: 666px; padding: 0 0 0 150px; margin: -125px 50px 0 auto !important; }
+		/* Margin positions text around */  
+		@media (max-width: 900px) {
+			#monogram { position: relative; width: auto; padding: 20px; margin: 0; }
+			#about { position: relative; width: auto; padding: 90px; margin: 0 !important; }
+			background-image { opacity: 0.2; }
+		}
+	</style>
+</head>	
+    
+<body>
 
-    <script>
+<!-- swap out for video -->
+<div id="monogram">
+
+
+   <script>
       // 2. This code loads the IFrame Player API code asynchronously.
       var tag = document.createElement('script');
 
@@ -35,6 +63,34 @@
         player.stopVideo();
       }
     </script>
-	<a onclick='player.seekTo(10);'>Go to blub</a>
-  </body>
+        <a onclick='player.seekTo(10);'>Go to blub</a>
+
+
+
+</div>
+
+<!-- swap out for questions-->
+<div id="about">
+<ul style="list-style-type:none">
+  <li>Q1</li>
+  <li>Q2</li>
+  <li>Q3</li>
+</ul>
+</div>
+
+<!--
+include jquery & backstretch
+<script type="text/javascript">
+$(function(){
+     $(window).resize(function(){
+         if($(this).width() >= 767){
+             $.backstretch("nh_bg.jpg", {speed: 150});
+         }
+      })
+      .resize();//trigger resize on page load
+});
+</script> 
+-->
+
+</body>	
 </html>
